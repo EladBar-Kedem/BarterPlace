@@ -18,7 +18,7 @@ public class Barter implements Serializable {
     private String details;
     private String status;
     private Date publishDate;
-
+// test
 
     public Barter(String id, String title, String area, String userId, String details, String status) {
         this.id = id;
