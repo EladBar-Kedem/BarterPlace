@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@drawable/app_background"
+    tools:context=".BartersPage">
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/bar_background"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/homeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:onClick="moveToHomePage"
+                android:background="@drawable/home_icon" />
+
+            <TextView
+                android:id="@+id/tvHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="moveToHomePage"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Home" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/profileBtn"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:onClick="moveToProfilePage"
+                android:background="@drawable/profile_icon" />
+
+            <TextView
+                android:id="@+id/tvProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="moveToProfilePage"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Profile" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/barterBtn"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:background="@drawable/handshake_icon"
+                android:text="Button" />
+
+            <TextView
+                android:id="@+id/tvBarters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Barters" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/chatBtn"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:onClick="moveToChatPage"
+                android:background="@drawable/messenger_icon" />
+
+            <TextView
+                android:id="@+id/tvChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="moveToChatPage"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Chat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/settingBtn"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:onClick="moveToSettingsPage"
+                android:background="@drawable/settings_icon" />
+
+            <TextView
+                android:id="@+id/tvSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="moveToSettingsPage"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="Setting" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@drawable/bar_background"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Barters"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/writeProductET"
+        android:layout_width="283dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="Write one Category/Product"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top" />
+
+    <Button
+        android:id="@+id/searchBtn"
+        android:layout_width="85dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:onClick="userWriteProduct"
+        android:text="Search"
+        android:textAllCaps="false"
+        android:textSize="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/writeProductET"
+        app:layout_constraintTop_toBottomOf="@+id/top" />
+
+    <ScrollView
+        android:id="@+id/bartersScrollView"
+        android:layout_width="409dp"
+        android:layout_height="455dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/writeProductET">
+
+        <LinearLayout
+            android:id="@+id/bartersLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "741253334875",
+    "project_id": "barterplaceui",
+    "storage_bucket": "barterplaceui.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741253334875:android:78220cd8dc65935cb73c7e",
+        "android_client_info": {
+          "package_name": "com.example.barterplaceui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "741253334875-rr87pkhp06shdkj1dovfvghumtimsdhr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.barterplaceui",
+            "certificate_hash": "daf65fd87a63c054929f740a4910187ec015295b"
+          }
+        },
+        {
+          "client_id": "741253334875-34nfhh9it1km05qfrndgkvk3qc25poiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDF-tgdwU9qnjc8UyJ_xRAdseIa2ld-bOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "741253334875-34nfhh9it1km05qfrndgkvk3qc25poiq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

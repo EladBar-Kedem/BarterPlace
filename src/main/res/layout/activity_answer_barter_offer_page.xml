@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    android:background="@drawable/app_background"
+    tools:context=".AnswerBarterOfferPage">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="729dp"
+        android:background="@drawable/open_barter_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/barterOfferLayout"
+            android:layout_width="409dp"
+            android:layout_height="591dp"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="132dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="80dp"
+            android:text="Back"
+            android:onClick="backToChatPage"
+            android:textAllCaps="false"
+            android:background="@drawable/btn_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barterOfferLayout" />
+
+        <TextView
+            android:id="@+id/userDetailsTV"
+            android:layout_width="361dp"
+            android:layout_height="47dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/barterOfferLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

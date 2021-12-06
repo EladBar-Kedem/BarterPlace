@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.barterplaceui">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/white_logo_dark_background"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/white_logo_dark_background"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BarterPlaceUI">
+        <activity android:name=".DisplayBarterPage"></activity>
+        <activity android:name=".AnswerBarterOfferPage" />
+        <activity android:name=".UserGivingAnswer" />
+        <activity android:name=".OwnerAnswerOfferPage" />
+        <activity android:name=".DeleteBarterOfferPage" />
+        <activity android:name=".OfferBarterFirst" />
+        <activity android:name=".DeleteBarterPage" />
+        <activity android:name=".AddBarterPage" />
+        <activity android:name=".ActivitiesInProgresPage" />
+        <activity android:name=".ActivitiesDonePage" />
+        <activity android:name=".SignUpDetailsPage" />
+        <activity android:name=".SignUpPage" />
+        <activity android:name=".MyBartersPage" />
+        <activity android:name=".BartersPage" />
+        <activity android:name=".ChatPage" />
+        <activity android:name=".SettingsPage" />
+        <activity android:name=".EditProfilePage" />
+        <activity android:name=".ProfilePage" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
