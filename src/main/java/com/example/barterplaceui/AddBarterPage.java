@@ -10,10 +10,12 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import services.DBBartersServices;
 import services.DBUsersServices;
@@ -56,13 +58,13 @@ public class AddBarterPage extends AppCompatActivity {
             service.addBarterToDB(barterID, stBarterTitle, stBarterArea, stBarterDetails);//addBarter Service
             if (isImageLoad()) {
                 uploadeBarterImageToStorage(imageUri, barterID);    //if there is an image save it
+            } else {
+                Intent intent = new Intent(getBaseContext(), MyBartersPage.class);
+                //send to MyBartersPage
+                startActivity(intent);
+                //end sending and kill last process
+                finish();
             }
-
-            Intent intent = new Intent(getBaseContext(), MyBartersPage.class);
-            //send to MyBartersPage
-            startActivity(intent);
-            //end sending and kill last process
-            finish();
         } else {
             Toast.makeText(getBaseContext(), "All Fields Must Be Filled!", Toast.LENGTH_LONG).show(); //message if not all fields are filled
         }
@@ -100,6 +102,19 @@ public class AddBarterPage extends AppCompatActivity {
         StorageReference bartersImagesRef = storageRef.child("barters_images");
         StorageReference barterIdForPicRef = bartersImagesRef.child(barterId);//create road to store image under barter id
 
-        barterIdForPicRef.putFile(imageUri);        //upload image
+        barterIdForPicRef.putFile(imageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override                                                           //upload image and create onSuccess listener
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                backToMyBartersPage(null);
+            }
+        });
+    }
+
+    public void backToMyBartersPage(View view) {
+        Intent intent = new Intent(getBaseContext(), MyBartersPage.class);
+        //send to MyBartersPage
+        startActivity(intent);
+        //end sending and kill last process
+        finish();
     }
 }
