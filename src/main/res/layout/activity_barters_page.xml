@@ -161,7 +161,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="Write one Category/Product"
+        android:hint="Write one Product"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.226"
