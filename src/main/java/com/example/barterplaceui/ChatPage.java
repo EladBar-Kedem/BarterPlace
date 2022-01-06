@@ -46,7 +46,7 @@ public class ChatPage extends AppCompatActivity {
     }
 
     private void concatMessages(ArrayList<Message> messages) {
-        if(messages != null){
+        if(messages != null && messages.size() != 0){
             this.messages.addAll(messages);
         }
         insertToFields(this.messages);
